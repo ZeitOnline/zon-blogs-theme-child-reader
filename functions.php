@@ -42,7 +42,7 @@ function zb_search_excerpt_highlight() {
 }
 
 function zb_recentposts_dropdown() {
-	$string .= '<select id="postcat" name="cat" class="postform">
+	$string .= '<select id="postcat" name="postcat" class="postform">
             	<option value="" selected>Ausgabe wählen<option>';
 
 	$args = array( 'numberposts' => '12', 'post_status' => 'publish' );
@@ -52,12 +52,10 @@ function zb_recentposts_dropdown() {
         $string .= '<option value="' . get_permalink($recent["ID"]) . '">'. $recent["post_title"] .'</option> ';
     }
  	$string .= "</select><span class=\"cat-icon-helper\">&nbsp;</span>
-     			<script type=\"text/javascript\">
-     				var urlmenu = document.getElementById( 'postcat' );
-     				window.addEvenListener('change', function() {
-						window.location.href=this.options[ this.selectedIndex ].value;
+     			<script>
+     				document.getElementById( 'postcat' ).addEventListener('change', function( event ) {
+     					window.location.href=event.target.options[ event.target.selectedIndex ].value
      				});
-            	};
             	</script>";
  	return $string;
 }

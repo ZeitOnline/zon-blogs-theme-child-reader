@@ -6,7 +6,7 @@ Tags: translation-ready, custom-background, theme-options, custom-menu, post-for
 
 Requires at least: 4.0  
 Tested up to: 5.0.3
-Stable tag: 1.0.0  
+Stable tag: 1.0.1  
 License: GPLv3 or later  
 License URI: http://www.gnu.org/licenses/gpl-3.0.html  
 
