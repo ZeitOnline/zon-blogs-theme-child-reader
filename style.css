@@ -13,23 +13,32 @@ GitHub Theme URI: https://github.com/ZeitOnline/zon-blogs-theme-child-freitext
 
 Zeit Online Blogs Twentyeighteen ist based on Zeit Online Blogs Twentyfifteen by Palasthotel, which was based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later. */
-
 .sidebar-wrapper-fullwidth.sidebar-wrapper-fullwidth--top {
-	margin-top: 0px !important;
+	margin-top: 0px !important
 }
 
 .search-highlight {
 	background: yellow;
-	color: black;
+	color: black
+}
+
+.site-content__navigation__category,
+.textwidth {
+	text-align: center
+}
+
+.site-content__navigation__category select::-ms-expand,
+.textwidth select::-ms-expand {
+	display: none
 }
 
 .textwidget .postform {
-  text-align: center;
+	text-align: center;
 	margin: 21px auto;
 	border: 2px solid #ccc;
 	border-radius: 4px;
 	font-size: 14px;
-	font-family: "TabletGothic",sans-serif;
+	font-family: "TabletGothic", sans-serif;
 	font-weight: bold;
 	text-transform: uppercase;
 	font-color: #44444c;
@@ -38,35 +47,38 @@ Underscores is distributed under the terms of the GNU GPL v2 or later. */
 	padding-right: 38px;
 	padding-top: 8px;
 	padding-bottom: 8px;
-	background:white;
+	background: white;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
 	cursor: pointer;
 	position: relative;
-	width: 220px;
+	width: 220px
 }
+
 .textwidget .postform:hover,
 .textwidget .postform:active {
-	background-color: rgba(255,255,255,0.8);
+	background-color: rgba(255, 255, 255, 0.8);
 	border: 2px solid #999;
-	color: #000;
+	color: #000
 }
+
 #cat-width-helper {
 	display: none;
-	font-size:14px;
+	font-size: 14px;
 	letter-spacing: 0.1em;
-	font-family: "TabletGothic",sans-serif;
+	font-family: "TabletGothic", sans-serif;
 	font-weight: bold;
-	text-transform: uppercase;
+	text-transform: uppercase
 }
+
 .cat-icon-helper {
-	position: relative;
+	position: relative
 }
+
 .cat-icon-helper:before {
 	content: "▾";
 	position: absolute;
 	top: -2px;
-	left: -40px;
+	left: -40px
 }
-
