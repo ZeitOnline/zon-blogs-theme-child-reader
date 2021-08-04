@@ -36,14 +36,14 @@ add_action( 'widgets_init', 'zb_topbar_widgets_init' );
 
 function zb_search_excerpt_highlight() {
 	$excerpt = get_the_content();
- 	$keys = implode('|', explode(' ', get_search_query()));
- 	$excerpt = preg_replace('/(' . $keys .')/iu', '<mark class="search-highlight">\0</mark>', $excerpt);
+	$keys = implode('|', explode(' ', get_search_query()));
+	$excerpt = preg_replace('/(' . $keys .')/iu', '<mark class="search-highlight">\0</mark>', $excerpt);
 	echo $excerpt;
 }
 
 function zb_recentposts_dropdown() {
 	$string .= '<select id="postcat" name="postcat" class="postform">
-            	<option value="" selected>Ausgabe wählen<option>';
+				<option value="" selected>Ausgabe wählen<option>';
 
 	$args = array( 'numberposts' => '12', 'post_status' => 'publish' );
 
@@ -51,13 +51,13 @@ function zb_recentposts_dropdown() {
     foreach( $recent_posts as $recent ){
         $string .= '<option value="' . get_permalink($recent["ID"]) . '">'. $recent["post_title"] .'</option> ';
     }
- 	$string .= "</select><span class=\"cat-icon-helper\">&nbsp;</span>
-     			<script>
-     				document.getElementById( 'postcat' ).addEventListener('change', function( event ) {
-     					window.location.href=event.target.options[ event.target.selectedIndex ].value
-     				});
-            	</script>";
- 	return $string;
+	$string .= "</select><span class=\"cat-icon-helper\">&nbsp;</span>
+				<script>
+					document.getElementById( 'postcat' ).addEventListener('change', function( event ) {
+						window.location.href=event.target.options[ event.target.selectedIndex ].value
+					});
+				</script>";
+	return $string;
 }
 add_shortcode('zb_dropdown', 'zb_recentposts_dropdown');
 add_filter('widget_text','do_shortcode');
