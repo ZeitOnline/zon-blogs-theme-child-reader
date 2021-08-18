@@ -21,3 +21,8 @@ and to watch during development run
 `npm run watch`
 
 on console.
+
+
+## CHANGES
+### 1.0.3
+* ZON-6781: Replace zb_render_ad with zb_place_ad
